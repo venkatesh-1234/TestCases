@@ -11,7 +11,7 @@ describe('test cases for employeebasicinfo', function () {
             done();
         })
     })
-    it('employeebasicinfo', function (done) {
+    it('Invalid employeeId', function (done) {
         req.query('/employeeBasicInfo',{employeeID:'dnged'}, 'tqm1fq42i2', function (err, res, body) {
             var output = res.statusCode;
             var data = JSON.parse(res.body);
