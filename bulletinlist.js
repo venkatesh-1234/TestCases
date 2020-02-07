@@ -33,7 +33,7 @@ describe('test cases for bulletinlist', function () {
             done();
         })
     })
-    it('bulletinlist', function (done) {
+    it('Invalid token', function (done) {
         req.query('/bulletin/list', {group:'點點微風信義店' ,startEpoch: '1575138600000',  endEpoch: '1583001000000'
     }, 'tqm1fq42i', function (err, res, body) {
             var output = res.statusCode;
