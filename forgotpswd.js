@@ -12,13 +12,13 @@ describe(' test cases for forgot password', function () {
            done();
         })
     })
-    it('forgot password database error', function (done) {
-        req.query('/forgotPswd',{emailID:''},'', function (err, res, body) {
+    it('Email not exits', function (done) {
+        req.query('/forgotPswd',{emailID:'ddfrf'},'', function (err, res, body) {
             var output = res.statusCode;
             var data = JSON.parse(res.body);
 			console.log(data)
 			assert.equal(data.success,false)
-            assert.equal(output, 503)
+            assert.equal(output, 200)
             done();
         })
     })
