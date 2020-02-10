@@ -5,8 +5,8 @@ describe(' test cases for LastMonthData', function () {
         req.query('/lastMonthData',null,'tqm1fq42i2', function (err, res, body) {
             var output = res.statusCode;
             var data = JSON.parse(res.body);
-			console.log(data)
-			assert.equal(data.success,true)
+	    console.log(data)
+	    assert.equal(data.success,true)
             assert.equal(output, 200)
             done();
         })
@@ -15,8 +15,8 @@ describe(' test cases for LastMonthData', function () {
         req.query('/lastMonthData',null,'tqm1fq42i', function (err, res, body) {
             var output = res.statusCode;
             var data = JSON.parse(res.body);
-			console.log(data)
-			assert.equal(data.success,false)
+	    console.log(data)
+	    assert.equal(data.success,false)
             assert.equal(output, 401)
             done();
         })
