@@ -16,7 +16,7 @@ describe('test cases for notification history', function () {
     req.query('/notification/history', 'group=test', null, function (err, res, body) {
       var output = res.statusCode;
       var data = JSON.parse(res.body);
-			console.log(data)
+      console.log(data)
       assert.equal(data.success,false)
       assert.equal(output, 401)
       done();
@@ -33,7 +33,7 @@ describe('test cases for notification history', function () {
     req.query('/notification/history', null,'ysdwdetdyfwefdfde', function (err, res, body) {
       var output = res.statusCode;
       var data = JSON.parse(res.body);
-			console.log(data)
+      console.log(data)
       assert.equal(data.success,false)
       assert.equal(output, 401)
       done();
@@ -43,7 +43,7 @@ describe('test cases for notification history', function () {
     req.query('/notification/history', null,'', function (err, res, body) {
       var output = res.statusCode;
       var data = JSON.parse(res.body);
-			console.log(data)
+      console.log(data)
       assert.equal(data.success,false)
       assert.equal(output, 401)
       done();
