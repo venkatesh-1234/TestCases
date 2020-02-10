@@ -6,8 +6,8 @@ describe(' test cases for revenue month', function () {
         req.query('/revenue/month',{ date: '2020/02/04', month: '202002', group: '點點微風信義店' },'tqm1fq42i2', function (err, res, body) {
             var output = res.statusCode;
             var data = JSON.parse(res.body);
-			console.log(data)
-			assert.equal(data.success,true)
+	    console.log(data)
+	    assert.equal(data.success,true)
             assert.equal(output, 200)
             done();
         })
@@ -16,8 +16,8 @@ describe(' test cases for revenue month', function () {
         req.query('/revenue/month',{dat:'01-26-2020'},'tqm1fq42i2', function (err, res, body) {
             var output = res.statusCode;
             var data = JSON.parse(res.body);
-			console.log(data)
-			assert.equal(data.success,false)
+	    console.log(data)
+	    assert.equal(data.success,false)
             assert.equal(output, 400)
             done();
         })
@@ -26,8 +26,8 @@ describe(' test cases for revenue month', function () {
         req.query('/revenue/month',{date:'01-26-2020'},'tqm1fq42i', function (err, res, body) {
             var output = res.statusCode;
             var data = JSON.parse(res.body);
-			console.log(data)
-			assert.equal(data.success,false)
+	    console.log(data)
+	    assert.equal(data.success,false)
             assert.equal(output, 401)
             done();
         })
