@@ -5,8 +5,8 @@ describe(' test cases for login', function () {
         req.query('/login', { username: '23111998', password: 'venky@123',regid: 'localWebui'}, '', function (err, res, body) {
             var output = res.statusCode;
             var data = JSON.parse(res.body);
-			console.log(data)
-			assert.equal(data.success,true)
+	    console.log(data)
+	    assert.equal(data.success,true)
             assert.equal(output, 200)
             done();
         })
@@ -15,7 +15,7 @@ describe(' test cases for login', function () {
         req.query('/login', { username: '2311199' }, '', function (err, res, body) {
             var output = res.statusCode;
             var data = JSON.parse(res.body);
-			console.log(data)
+	    console.log(data)
             assert.equal(data.success,false)
             assert.equal(output, 400)
             done();
@@ -25,7 +25,7 @@ describe(' test cases for login', function () {
         req.query('/login', { username: '2311199', password: 'venky@123' }, '', function (err, res, body) {
             var output = res.statusCode;
             var data = JSON.parse(res.body);
-			console.log(data)
+	    console.log(data)
             assert.equal(data.success,false)
             assert.equal(output, 401)
             done();
@@ -35,7 +35,7 @@ describe(' test cases for login', function () {
         req.query('/login', { username: null, password: null }, '', function (err, res, body) {
             var output = res.statusCode;
             var data = JSON.parse(res.body);
-			console.log(data)
+	    console.log(data)
             assert.equal(data.success,false)
             assert.equal(output, 401)
             done();
