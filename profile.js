@@ -5,7 +5,7 @@ describe(' test cases for profile', function () {
         req.query('/profile',null,'9s5529mrvdt', function (err, res, body) {
             var output = res.statusCode;
             var data = JSON.parse(res.body);
-			console.log(data)
+	    console.log(data)
             assert.equal(data.success,true)
             assert.equal(output, 200)
             done();
@@ -15,8 +15,8 @@ describe(' test cases for profile', function () {
         req.query('/profile',null,null, function (err, res, body) {
             var output = res.statusCode;
             var data = JSON.parse(res.body);
-			console.log(data)
-			assert.equal(data.success,false)
+            console.log(data)
+	    assert.equal(data.success,false)
             assert.equal(output,401)
             done();
         })
@@ -25,8 +25,8 @@ describe(' test cases for profile', function () {
         req.query('/profile',null,'rtpq20xnd', function (err, res, body) {
             var output = res.statusCode;
             var data = JSON.parse(res.body);
-			console.log(data)
-			assert.equal(data.success,false)
+	    console.log(data)
+	    assert.equal(data.success,false)
             assert.equal(output,401)
             done();
         })
